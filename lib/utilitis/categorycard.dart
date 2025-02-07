@@ -46,6 +46,16 @@ class CategoryCard extends StatelessWidget {
                 '$taskCount tasks',
                 style: const TextStyle(color: Colors.grey),
               ),
+              Align(alignment: Alignment.bottomRight,
+                child: PopupMenuButton(itemBuilder: (context)=>[
+                  PopupMenuItem(child: Row(
+                    children: [
+                      Icon(CupertinoIcons.delete),
+                      Text('delete'),
+                    ],
+                  ))
+                ]),
+              ),
             ],
           ),
         ),
